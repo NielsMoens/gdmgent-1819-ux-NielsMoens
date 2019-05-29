@@ -1,0 +1,245 @@
+/**
+ * Stylesheet for UX
+ * 	
+ * @author Niels Moens <nielmoen@student.arteveldehs.be>
+ *
+ */
+
+/* ===========================================
+= MAIN
+=========================================== */
+
+/*highlighted*/
+#highlighted img{
+	height: auto;
+	float: left;
+	width: 100%;
+	border-top-right-radius: 1%;
+	border-top-left-radius: 1%;
+}
+#highlighted ul li {
+	list-style: none;		
+}
+section.test{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.navigator{
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.navigator li{
+	float: left;
+}
+#highlighted .navigator .prev {
+	height: 25px;
+	width: 35px;
+	background-image: url(../img/arrowPrevious.gif);
+	float: left;
+	z-index: 2;
+}
+#highlighted .navigator .next {
+	height: 25px;
+	width: 35px;
+	background-image: url(../img/arrowNext.gif);
+	float: left;
+	z-index: 2;
+}
+#highlighted .navigator .next:hover{
+	height: 25px;
+	width: 35px;
+	background-image: url(../img/arrowNextHover.png);
+	float: left;
+	z-index: 2;
+}
+#highlighted .navigator .prev:hover {
+	height: 25px;
+	width: 35px;
+	background-image: url(../img/arrowPreviousHover.png);
+	float: left;
+	z-index: 2;
+}
+.content h2::after,.content h2::before{
+	background-image: url(../img/tridots-footer.png);
+	content: '';
+	background-repeat: repeat-x;
+	width:100%;
+	min-height: .5rem;
+	float: left;
+	margin: 1.5rem 0;
+}
+
+/*content*/
+.content{
+	background-color:var(--background-color);
+	display: block;
+}
+.content a{
+	font-family: "helvetica";
+}
+.content a:hover{
+	color: var(--accent-color-red);
+}
+.companyServices section{
+	width: 50%;
+	margin: auto;
+	margin-top: 2rem;
+	
+}
+.companyServices h2 {
+	text-align: center;	
+	font-size: 1.6rem;
+	padding: 2rem 2rem; 
+}	
+.companyServices h3{
+	margin: 1rem 1rem;
+}
+.companyServices img{
+	height: auto;
+	width: 15%;
+}
+
+.companyServices p{
+	color: var(--text-color-darkgray);
+}
+h2:first-of-type::before,h2::after{
+	background-image: url(../img/tridots-footer.png);
+	content: '';
+	background-repeat: repeat-x;
+	width:100%;
+	min-height: .5rem;
+	float: left;
+	margin: 1.5rem 0;
+}
+#purpose, #quality, #service{
+	box-sizing: border-box;
+	width: 30rem;
+	padding: 3rem;
+	background-color: var(--background-color-rooms);
+	float: left;
+	text-align: center;
+}
+.companyServices i{
+	font-size: 30px;
+}
+
+/*Polular rooms*/
+#rooms {
+	padding:0;
+}
+
+#rooms h3{
+	width: auto;
+	float:left;
+	background:none;
+	background-color:var(--background-color);
+	padding: 1rem 1rem 1rem 0;
+	margin-left: 0;
+}
+#rooms div{
+	width: 100%;
+	float: left;
+	background-image:url(../img/tridots-footer.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	margin: 2rem 0;
+}
+#rooms h4{
+	padding-top: 1.5rem;
+}
+#rooms p,#rooms h4{
+	text-align: center;
+}
+#rooms h4 a:hover{
+	color: var(--accent-color-red);
+}
+#rooms p a{
+	color:var(--text-color-darkgray);	
+}
+#rooms p a:hover{
+	color:var(--main-color-black);
+}
+#rooms img{
+	width: 100%;
+}
+#rooms a{
+	text-decoration: none;
+	font-family: "helvetica";
+	color: var(--main-color-black);
+}
+
+
+#rooms li{
+	width: 90%;
+	background-color: var(--background-color-rooms);
+	padding: 0 0 1.5rem 0;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	position: relative;
+}
+
+.flexContainer{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.boxOverlay{
+	position: absolute;
+	top: 110px;
+	left: 160px;
+	background-color: var(--accent-color-red);
+	color: var(--prices-color);
+	width:150px;
+  height:150px;
+	font-family: "helvetica";
+		
+}
+.companyServices{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+	float: left;
+	justify-content: space-between;
+}
+@media (min-width: 1062px ){
+	.prices{
+		position: absolute;
+		top: 110px;
+		left: 160px;
+		background-color: var(--accent-color-red);
+		color: var(--prices-color);
+		padding-right: 5px;
+		padding-left: 5px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		font-family: "helvetica";
+	}
+}
+@media (min-width: 700px){
+	#purpose, #quality, #service{
+		margin: 0;
+		width: 31.5%;
+		background-color: var(--background-color-rooms);
+		text-align: center;
+	}
+	#rooms li{
+		width: 45%;
+		background-color: var(--background-color-rooms);
+		padding: 0 0 1.5rem 0;
+		margin: 0 0 2rem 0rem;
+	}
+@media (min-width: 850px){
+	#rooms ul{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+	#rooms ul li{
+		margin: 0 0.5rem
+	}
+}
+	
+}
